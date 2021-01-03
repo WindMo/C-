@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="log">
+      <UniqueIdentifier>{e9e31d0d-cf35-4496-9a47-00d8497e2bac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="net">
+      <UniqueIdentifier>{07e1d8f6-b463-4363-ad4b-81a3a4a2352e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\log\log_stdout.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\log\logging.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\log\log_file.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\tcp_client.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\tcp_connection.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\tcp_server.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\acceptor.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\buffer.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\callbacks.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\event.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\event_loop.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\inet_address.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\iocp_event.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\socket.h">
+      <Filter>net</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\log\logging.cc">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\log\log_file.cc">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\log\log_stdout.cc">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\net\tcp_client.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\net\tcp_connection.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\net\tcp_server.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\net\acceptor.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\net\event_loop.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\net\iocp_event.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\net\socket.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

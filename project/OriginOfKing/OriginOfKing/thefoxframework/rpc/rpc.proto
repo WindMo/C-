@@ -1,0 +1,58 @@
+package thefox.rpc;
+
+option cc_generic_services = true;
+
+// 请求
+message Call {
+	required int64 id = 1;
+	required string service = 2;
+    required string method = 3; // name of a method_descriptor
+    optional bytes request = 4; // pb2-encoded message
+	optional int32 timeout = 5 [default = 0]; // 请求超时时间，0表示一直等待
+}
+
+// 返回
+message Reply {
+	enum Result {
+		kOk = 0;
+		kError = 1;
+		kServiceNotFound = 2;
+		kMethodNotFound = 3;
+		kClientFailed = 4;
+		kTimeout = 5;
+	};
+	required int64 id = 1;
+	required Result result = 2;
+	optional bytes response = 3; // pb2-encoded message
+}
+
+// 单向传输的数据
+message OnewayMessage {
+	required string type = 1;
+	required bytes body = 2;
+};
+
+// 传输层传输的内容
+message Box {
+    optional Call call = 1;
+    optional Reply reply = 2;
+	optional OnewayMessage oneway = 3;
+}
+
+//空消息
+message Placeholder {  
+};
+
+// 心跳消息
+message HeartBeath {
+};
+
+// rpc列表
+message RpcList {
+	repeated string service = 1;
+}
+
+service RpcService {
+  rpc heartBeath (HeartBeath) returns (HeartBeath);
+  rpc listRpc (Placeholder) returns (RpcList);
+}
