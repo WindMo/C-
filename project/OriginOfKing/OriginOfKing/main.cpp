@@ -5,6 +5,7 @@
 #include <sstream>
 #include "util.h"
 #include "tree.h"
+#include <map>
 using namespace std;
 
 int main()
@@ -21,23 +22,20 @@ int main()
 	}
 	FileUtils::saveFile(l, "C:\\Users\\Administrator\\Desktop\\c++ЕЅзг\\1.txt");
 	*/
-	MTree<int> tree = MTree<int>();
-	
-	MNode<int> *root1 = &MNode<int>(100);
-	MNode<int> *root2 = &MNode<int>(10);
-	MNode<int> *root3 = &MNode<int>(200);
-	MNode<int> *root4 = &MNode<int>(20);
-	MNode<int> *root5 = &MNode<int>(300);
-	MNode<int> *root6 = &MNode<int>(30);
-	tree.init(root1);
-	tree.putChild(root2,root1);
-	tree.putChild(root3, root1);
-	tree.putChild(root4, root2);
-	tree.putChild(root5, root2);
-	tree.putChild(root4, root3);
-	tree.putChild(root5, root3);
-	tree.putChild(root5, root4);
-	tree.putChild(root6, root4);
-	tree.tranversal();
+	map<int, int> mp;
+	mp.insert(make_pair(1, 10));
+	mp[1] = 11;
+	mp.insert(make_pair(2, 20));
+	mp.insert(make_pair(3, 30));
+	map<int, int>::iterator it;
+	for (it = mp.begin(); it != mp.end(); it++) {
+		cout << it->first << ": " << it->second << endl;
+	}
+	map<string, int> mp2;
+	mp2["aaa"] = 10;
+	map<string, int>::iterator it2;
+	for (it2 = mp2.begin(); it2 != mp2.end(); it2++) {
+		cout << it2->first << ": " << it2->second << endl;
+	}
 	return 0;
 }

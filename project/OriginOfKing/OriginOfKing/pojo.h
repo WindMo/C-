@@ -12,7 +12,9 @@ private:
 	int deathDate;
 	// ¸¸Ç×ÐÕÃû
 	string fatherName;
+
 public:
+	static const Person Null;
 	Person(string name, int birthDate, int deathDate, string fatherName) {
 
 		this->name = name;
